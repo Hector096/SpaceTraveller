@@ -23,6 +23,10 @@ body {
   padding-bottom: 50px;
 }
 
+.py-10 {
+  padding-top: 30%;
+}
+
 .h-10 {
   height: 40px;
 }
@@ -37,4 +41,36 @@ body {
 
 .font-bold {
   font-weight: 600;
+}
+
+.w-20 {
+  width: 20%;
+}
+
+.w-60 {
+  width: 60%;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.mx-equal {
+  margin: 35% 10%;
+}
+
+.mx-equal-2 {
+  margin: 40% 10%;
 }

@@ -2,28 +2,26 @@ import { Badge, Button } from 'react-bootstrap';
 
 const Mission = (prop) => {
   const { detail } = prop;
-  const { missionId, missionName, description } = detail;
+  const {
+    missionId, missionName,
+    description, reserved,
+  } = detail;
   return (
     <tr className="text-lg" key={missionId}>
-      <td className="font-bold">{missionName}</td>
-      <td>{description}</td>
-      <td><Badge bg="secondary">NOT A MEMBER</Badge></td>
-      <td><Button variant="outline-dark">Join Mission</Button></td>
+      <td className="w-20 font-bold">{missionName}</td>
+      <td className="w-60">{description}</td>
+      <td>
+        <Badge bg={reserved ? 'primary' : 'secondary'} className="mx-equal">
+          {reserved ? 'ACTIVE MEMBER' : 'NOT A MEMBER'}
+        </Badge>
+      </td>
+      <td>
+        <Button variant={reserved ? 'outline-danger' : 'outline-dark'} className="mx-equal-2">
+          {reserved ? 'Leave Mission' : 'Join Mission'}
+        </Button>
+      </td>
     </tr>
   );
 };
 
 export default Mission;
-
-// {/* <tr className="text-lg">
-//   <td className="font-bold">Mark</td>
-//   <td>Otto</td>
-//   <td><Badge bg="secondary">NOT A MEMBER</Badge></td>
-//   <td><Button variant="outline-dark">Join Mission</Button></td>
-// </tr>
-// <tr className="text-lg">
-//   <td className="font-bold">Jacob</td>
-//   <td>Thornton</td>
-//   <td><Badge bg="primary">ACTIVE MEMBER</Badge></td>
-//   <td><Button variant="outline-danger">Leave Mission</Button></td>
-// </tr> */}
