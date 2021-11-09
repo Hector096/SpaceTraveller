@@ -9,7 +9,7 @@ export default function Missions() {
   useEffect(() => {}, []);
 
   return (
-    <div className="px-20 py-30">
+    <div className="px-10 py-30">
       <Table
         striped
         bordered
@@ -18,7 +18,7 @@ export default function Missions() {
         responsive="sm | md | ld | xl"
       >
         <thead>
-          <tr className="text-xl">
+          <tr className="text-xl h-14">
             <th>Mission</th>
             <th>Description</th>
             <th>Status</th>

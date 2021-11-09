@@ -14,8 +14,8 @@ body {
 }
 
 .px-20 {
-  padding-right: 10%;
-  padding-left: 10%;
+  padding-right: 3%;
+  padding-left: 3%;
 }
 
 .py-30 {
@@ -32,11 +32,11 @@ body {
 }
 
 .text-lg {
-  font-size: 22px;
+  font-size: 22px !important;
 }
 
 .text-xl {
-  font-size: 25px;
+  font-size: 25px !important;
 }
 
 .font-bold {
@@ -49,28 +49,4 @@ body {
 
 .w-60 {
   width: 60%;
-}
-
-.flex {
-  display: flex;
-}
-
-.flex-col {
-  flex-direction: column;
-}
-
-.items-center {
-  align-items: center;
-}
-
-.justify-center {
-  justify-content: center;
-}
-
-.mx-equal {
-  margin: 35% 10%;
-}
-
-.mx-equal-2 {
-  margin: 40% 10%;
 }
