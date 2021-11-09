@@ -8,15 +8,15 @@ const getMissionsFromApi = async () => {
 
   response.data.forEach((data) => {
     const missionObject = {
-      mission_id: data.mission_id,
-      mission_name: data.mission_name,
+      missionId: data.mission_id,
+      missionName: data.mission_name,
       description: data.description,
     };
 
     array.push(missionObject);
   });
 
-  return { data: array };
+  return array;
 };
 
 export default getMissionsFromApi;
