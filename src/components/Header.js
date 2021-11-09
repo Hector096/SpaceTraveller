@@ -1,9 +1,13 @@
 import React from 'react';
 import { Navbar, Container, Nav } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
+import usePathname from '../utils/usePathName';
+
 import './App.css';
 
 export default function Header() {
+  const { pathname } = usePathname();
+  console.log(pathname);
   return (
     <Navbar bg="white" expand="lg" className="border border-bottom-3">
       <Container className="p-3 bg-white">
