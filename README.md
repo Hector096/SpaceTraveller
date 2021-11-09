@@ -54,6 +54,13 @@ npm run build
   - Linkedin: [@linkedinhandle](https://www.linkedin.com/in/hector096/)
 
 
+👤 **Muhammad Mustapha Sesay**
+
+- GitHub: [@mmsesay](https://github.com/mmsesay)
+- Twitter: [@DeeMaejor](https://twitter.com/DeeMaejor)
+- LinkedIn: [Muhammad M Sesay](https://linkedin.com/in/muhammad-m-sesay)
+
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!

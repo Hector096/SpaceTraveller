@@ -7,6 +7,10 @@ import './App.css';
 export default function Header() {
   return (
     <Navbar bg="white" expand="lg" className="border border-bottom-3">
+      <link
+        href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css"
+        rel="stylesheet"
+      />
       <Container className="p-3 bg-white">
         <NavLink to="/" className="h2 text-decoration-none text-dark me-5 fw-bold">
           <img src={logo} alt="logo" className="logo" />
