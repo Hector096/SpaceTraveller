@@ -6,9 +6,14 @@ import Mission from './Mission';
 export default function Missions() {
   const state = useSelector((state) => state.missionsReducer);
 
-  const updateReserveForMission = (missionId) => {
-    console.log('parem: ', missionId);
-  };
+  // const updateReserveForMission = (paramMissionId) => {
+  //   state.missionsArray.forEach((mission) => {
+  //     if (mission.missionId === paramMissionId) {
+  //       return { ...state, reserved: true };
+  //     }
+  //   });
+  //   // console.log('parem: ', missionId);
+  // };
 
   useEffect(() => {}, []);
 
@@ -36,7 +41,6 @@ export default function Missions() {
                 <Mission
                   key={mission.missionId}
                   detail={mission}
-                  passToParent={updateReserveForMission}
                 />
               ),
             )

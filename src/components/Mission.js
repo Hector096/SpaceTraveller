@@ -1,14 +1,18 @@
+import { useDispatch } from 'react-redux';
 import { Badge, Button } from 'react-bootstrap';
+import { reserveMissionAction } from '../redux/missions/mission';
 
 const Mission = (prop) => {
-  const { detail, passToParent } = prop;
+  const dispatch = useDispatch();
+
+  const { detail } = prop;
   const {
     missionId, missionName,
     description, reserved,
   } = detail;
 
   const handleReserve = (missionId) => {
-    passToParent(missionId);
+    dispatch(reserveMissionAction({ missionId }));
   };
 
   return (

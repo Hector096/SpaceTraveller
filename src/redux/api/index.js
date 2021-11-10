@@ -1,5 +1,4 @@
 import axios from 'axios';
-// import generateRandomReversedStatus from '../../utils/generator';
 
 const baseUrl = 'https://api.spacexdata.com/v3/missions';
 
