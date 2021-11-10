@@ -1,24 +1,27 @@
 import React, { useEffect } from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Table } from 'react-bootstrap';
 import Mission from './Mission';
+import getMissionsFromApi from '../redux/api/api';
+import { getMissionsAction } from '../redux/missions/mission';
 
 export default function Missions() {
   const state = useSelector((state) => state.missionsReducer);
 
-  // const updateReserveForMission = (paramMissionId) => {
-  //   state.missionsArray.forEach((mission) => {
-  //     if (mission.missionId === paramMissionId) {
-  //       return { ...state, reserved: true };
-  //     }
-  //   });
-  //   // console.log('parem: ', missionId);
-  // };
+  const dispatch = useDispatch();
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    getMissionsFromApi()
+      .then((data) => {
+        dispatch(getMissionsAction(data));
+      })
+      .catch((err) => {
+        throw new Error(err);
+      });
+  }, []);
 
   return (
-    <div className="px-10 py-30">
+    <div className="m-5 mission-container">
       <Table
         striped
         bordered

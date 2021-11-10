@@ -41,16 +41,3 @@ const missionsReducer = (state = initialState, action) => {
 };
 
 export default missionsReducer;
-
-// {
-//   const newState = (mission) => {
-//     if (mission.missionId !== action.payload) {
-//       return mission;
-//     }
-//     return { ...mission, reserved: !mission.reserved };
-//   };
-//   return {
-//     ...state,
-//     missionsArray: [state.missionsArray.map((mission) => newState(mission))],
-//   };
-// }
