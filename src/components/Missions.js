@@ -1,15 +1,27 @@
 import React, { useEffect } from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Table } from 'react-bootstrap';
+import { getMissionsFromApi } from '../redux/api/api';
 import Mission from './Mission';
+import { getMissionsAction } from '../redux/missions/mission';
 
 export default function Missions() {
-  const state = useSelector((state) => state.missionsReducer);
+  const state = useSelector((state) => state.missions);
 
-  useEffect(() => {}, []);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    getMissionsFromApi()
+      .then((data) => {
+        dispatch(getMissionsAction(data));
+      })
+      .catch((err) => {
+        throw new Error(err);
+      });
+  }, []);
 
   return (
-    <div className="px-10 py-30">
+    <div className="m-5 mission-container">
       <Table
         striped
         bordered
