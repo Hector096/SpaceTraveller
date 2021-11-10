@@ -1,5 +1,5 @@
 import axios from 'axios';
-import generateRandomReversedStatus from '../../utils/generator';
+// import generateRandomReversedStatus from '../../utils/generator';
 
 const baseUrl = 'https://api.spacexdata.com/v3/missions';
 
@@ -12,7 +12,7 @@ const getMissionsFromApi = async () => {
       missionId: data.mission_id,
       missionName: data.mission_name,
       description: data.description,
-      reserved: generateRandomReversedStatus(),
+      reserved: false,
     };
 
     array.push(missionObject);

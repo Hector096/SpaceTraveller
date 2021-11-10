@@ -1,11 +1,16 @@
 import { Badge, Button } from 'react-bootstrap';
 
 const Mission = (prop) => {
-  const { detail } = prop;
+  const { detail, passToParent } = prop;
   const {
     missionId, missionName,
     description, reserved,
   } = detail;
+
+  const handleReserve = (missionId) => {
+    passToParent(missionId);
+  };
+
   return (
     <tr className="text-lg" key={missionId}>
       <td className="w-64 font-bold">{missionName}</td>
@@ -19,7 +24,11 @@ const Mission = (prop) => {
       </td>
       <td className="h-40">
         <div className="flex items-center justify-center h-full p-3">
-          <Button variant={reserved ? 'outline-danger' : 'outline-dark'} className="text-lg">
+          <Button
+            onClick={() => handleReserve(missionId)}
+            variant={reserved ? 'outline-danger' : 'outline-dark'}
+            className="text-lg"
+          >
             {reserved ? 'Leave Mission' : 'Join Mission'}
           </Button>
         </div>

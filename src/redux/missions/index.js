@@ -1,4 +1,5 @@
 const GET_MISSIONS = 'spaceTraveler/missions/GET_MISSIONS';
+const RESERVE_MISSIONS = 'spaceTraveler/missions/RESERVE_MISSIONS';
 
 // init state
 const initialState = {
@@ -11,10 +12,21 @@ export const getMissionsAction = (payload) => ({
   payload,
 });
 
+export const reserveMissionsAction = (payload) => ({
+  type: RESERVE_MISSIONS,
+  payload,
+});
+
 // reducer
 const missionsReducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_MISSIONS:
+      return {
+        ...state,
+        missionsArray: [...state.missionsArray.concat(action.payload)],
+      };
+
+    case RESERVE_MISSIONS:
       return {
         ...state,
         missionsArray: [...state.missionsArray.concat(action.payload)],

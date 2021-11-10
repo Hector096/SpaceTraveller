@@ -6,6 +6,10 @@ import Mission from './Mission';
 export default function Missions() {
   const state = useSelector((state) => state.missionsReducer);
 
+  const updateReserveForMission = (missionId) => {
+    console.log('parem: ', missionId);
+  };
+
   useEffect(() => {}, []);
 
   return (
@@ -28,7 +32,13 @@ export default function Missions() {
         <tbody>
           {
             state.missionsArray.map(
-              (mission) => <Mission key={mission.missionId} detail={mission} />,
+              (mission) => (
+                <Mission
+                  key={mission.missionId}
+                  detail={mission}
+                  passToParent={updateReserveForMission}
+                />
+              ),
             )
           }
         </tbody>
