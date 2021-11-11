@@ -4,7 +4,7 @@
 
 ---
 ## Live Demo
-- [@Link](#spacetraveller.netlify.app)
+- [@Link](https://spacetraveller.netlify.app/)
 
 ## Screenshots
 ![screenshot](./src/assets/Screenshot.png)
