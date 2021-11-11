@@ -3,6 +3,7 @@ const RESERVE_MISSION = 'spaceTraveler/missions/RESERVE_MISSION';
 
 // init state
 const initialState = {
+  loading: false,
   missionsArray: [],
 };
 

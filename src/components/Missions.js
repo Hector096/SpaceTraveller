@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Table } from 'react-bootstrap';
+import { Table, Spinner } from 'react-bootstrap';
 import { getMissionsFromApi } from '../redux/api/api';
 import Mission from './Mission';
 import { getMissionsAction } from '../redux/missions/mission';
@@ -41,14 +41,18 @@ export default function Missions() {
         </thead>
         <tbody>
           {
-            state.missionsArray.map(
-              (mission) => (
-                <Mission
-                  key={mission.missionId}
-                  detail={mission}
-                />
-              ),
-            )
+            state.loading !== true ? (
+              <>
+                {state.missionsArray === null || state.missionsArray.length === 0 ? (
+                  <h2 className="text-center fw-bold mt-5">No Missions Found..</h2>
+                ) : (state.missionsArray.map((mission) => (
+                  <Mission
+                    key={mission.missionId}
+                    detail={mission}
+                  />
+                )))}
+              </>
+            ) : (<Spinner animation="grow" className="spinner" size="lg" />)
           }
         </tbody>
       </Table>

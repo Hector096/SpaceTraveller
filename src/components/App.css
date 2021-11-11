@@ -58,7 +58,7 @@ body {
 
 .link-active {
   color: black;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 .link:hover {
