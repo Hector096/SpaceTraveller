@@ -7,7 +7,7 @@
 - [@Link](#spacetraveller.netlify.app)
 
 ## Screenshots
-![screenshot](../SpaceTraveller/src/assets/Screenshot.png)
+![screenshot](./src/assets/Screenshot.png)
 
 ## Built With
 
