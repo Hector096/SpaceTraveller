@@ -6,9 +6,16 @@ import { useSelector } from 'react-redux';
 
 export default function Profile() {
   const rockets = useSelector((state) => state.rockets);
+  const missions = useSelector((state) => state.missions.missionsArray);
+
   const myrockets = rockets.data !== null
     ? rockets.data.filter((item) => item.reserved !== false) || []
     : [];
+
+  const myMissions = missions !== null
+    ? missions.filter((item) => item.reserved !== false) || []
+    : [];
+
   return (
     <div>
       <Row>
@@ -16,7 +23,17 @@ export default function Profile() {
           <h2>My Missions</h2>
           <Card className="mt-4">
             <ListGroup variant="flush">
-              <ListGroup.Item className="p-4">Cras justo odio</ListGroup.Item>
+              {myMissions.length !== 0 ? (
+                myMissions.map((mission) => (
+                  <ListGroup.Item className="p-4" key={mission.missionId}>
+                    {mission.missionName}
+                  </ListGroup.Item>
+                ))
+              ) : (
+                <ListGroup.Item className="p-4">
+                  No Missions Reserved
+                </ListGroup.Item>
+              )}
             </ListGroup>
           </Card>
         </Col>
@@ -42,3 +59,26 @@ export default function Profile() {
     </div>
   );
 }
+
+// (
+//   <ListGroup.Item className="p-4" key={mission.missionId}>
+//     {mission.missionName}
+//   </ListGroup.Item>
+// ))
+
+// {
+//   missions.length !== 0 ? (
+//     missions.map((mission) => (
+//       mission.reserved
+//         && (
+//           <ListGroup.Item className="p-4" key={mission.missionId}>
+//             {mission.missionName}
+//           </ListGroup.Item>
+//         )
+//     ))
+//   ) : (
+//     <ListGroup.Item className="p-4">
+//       No Missions Reserved
+//     </ListGroup.Item>
+//   )
+// }

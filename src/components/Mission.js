@@ -16,7 +16,7 @@ const Mission = (prop) => {
   };
 
   return (
-    <tr className="text-lg" key={missionId}>
+    <tr className="text-lg">
       <td className="w-64 font-bold">{missionName}</td>
       <td className="w-2/3">{description}</td>
       <td className="h-40">

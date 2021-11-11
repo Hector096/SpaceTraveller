@@ -18,9 +18,9 @@ export default function Header() {
             className="ms-lg-auto m-2 my-lg-0"
             navbarScroll
           >
-            <NavLink exact to="/" className="h5 me-4 link text-decoration-none" activeClassName="link-active">Rockets</NavLink>
-            <NavLink to="missions" className="h5 me-4 link text-decoration-none" activeClassName="link-active">Missions</NavLink>
-            <NavLink to="profile" className="h5 me-4 link text-decoration-none" activeClassName="link-active">My Profile</NavLink>
+            <NavLink exact to="/" className="h5 me-4 NavLink text-decoration-none" activeClassName="NavLink-active">Rockets</NavLink>
+            <NavLink to="missions" className="h5 me-4 NavLink text-decoration-none" activeClassName="NavLink-active">Missions</NavLink>
+            <NavLink to="profile" className="h5 me-4 NavLink text-decoration-none" activeClassName="link-active">My Profile</NavLink>
           </Nav>
         </Navbar.Collapse>
       </Container>
