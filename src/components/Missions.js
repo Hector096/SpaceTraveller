@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Table } from 'react-bootstrap';
+import { getMissionsFromApi } from '../redux/api/api';
 import Mission from './Mission';
-import getMissionsFromApi from '../redux/api/api';
 import { getMissionsAction } from '../redux/missions/mission';
 
 export default function Missions() {
-  const state = useSelector((state) => state.missionsReducer);
+  const state = useSelector((state) => state.missions);
 
   const dispatch = useDispatch();
 

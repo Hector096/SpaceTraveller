@@ -15,10 +15,10 @@ export default function Header() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav
-            className="ms-auto m-2 my-lg-0"
+            className="ms-lg-auto m-2 my-lg-0"
             navbarScroll
           >
-            <NavLink to="/" className="h5 me-4 link text-decoration-none" activeClassName="link-active">Rockets</NavLink>
+            <NavLink exact to="/" className="h5 me-4 link text-decoration-none" activeClassName="link-active">Rockets</NavLink>
             <NavLink to="missions" className="h5 me-4 link text-decoration-none" activeClassName="link-active">Missions</NavLink>
             <NavLink to="profile" className="h5 me-4 link text-decoration-none" activeClassName="link-active">My Profile</NavLink>
           </Nav>
