@@ -50,3 +50,38 @@ body {
 .w-60 {
   width: 60%;
 }
+
+.link {
+  text-decoration: none;
+  color: gray;
+}
+
+.link-active {
+  color: black;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: black;
+}
+
+.spinner {
+  position: absolute;
+  margin: auto;
+  right: 50%;
+  bottom: 50%;
+  font-size: 50%;
+}
+
+.mission-container {
+  height: 85vh;
+  overflow-y: scroll;
+}
+
+.app-container {
+  height: 100vh;
+}
+
+.rocket-img {
+  width: 10px;
+}
