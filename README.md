@@ -1,6 +1,6 @@
 # Space Traveller
 
->  Space Traveller is a powerful SPA for booking slot to space travel.
+>  "Space Travelers' Hub" is a web application for a company that provides commercial and scientific space travel services, We have been working with the real live data from the SpaceX API. The application will allow users to book rockets and join selected space missions. The Space Travelers' Hub consists of Rockets, Missions, and the My Profile section.
 
 ---
 ## Live Demo
