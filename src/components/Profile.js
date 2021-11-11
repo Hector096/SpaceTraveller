@@ -2,8 +2,11 @@ import React from 'react';
 import {
   Col, Row, Card, ListGroup,
 } from 'react-bootstrap';
+import { useSelector } from 'react-redux';
 
 export default function Profile() {
+  const rockets = useSelector((state) => state.rockets);
+  const myrockets = rockets.data.filter((item) => item.reserved !== false) || [];
   return (
     <div>
       <Row>
@@ -12,8 +15,6 @@ export default function Profile() {
           <Card className="mt-4">
             <ListGroup variant="flush">
               <ListGroup.Item className="p-4">Cras justo odio</ListGroup.Item>
-              <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
-              <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
             </ListGroup>
           </Card>
         </Col>
@@ -21,9 +22,12 @@ export default function Profile() {
           <h2>My Rockets</h2>
           <Card className="mt-4">
             <ListGroup variant="flush">
-              <ListGroup.Item>Cras justo odio</ListGroup.Item>
-              <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
-              <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
+              { myrockets.length !== 0 ? myrockets.map((item) => (
+                <ListGroup.Item className="p-4" key={item.id}>{item.rocketName}</ListGroup.Item>
+              )) : (
+                <ListGroup.Item className="p-4">No Rockets Reserved</ListGroup.Item>
+              )}
+
             </ListGroup>
           </Card>
         </Col>

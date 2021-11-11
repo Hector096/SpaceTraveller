@@ -8,9 +8,10 @@ export default function Rockets() {
   const rockets = useSelector((state) => state.rockets);
   const dispatch = useDispatch();
 
+  useEffect(() => rockets.data.length === 0 && dispatch(fetchRocketData()), []);
   useEffect(() => {
-    dispatch(fetchRocketData());
-  }, [dispatch]);
+    rockets.data.length === 0 ? dispatch(fetchRocketData()) : [];
+  }, []);
 
   return (
     <div>
