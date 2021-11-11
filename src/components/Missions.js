@@ -11,13 +11,15 @@ export default function Missions() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    getMissionsFromApi()
-      .then((data) => {
-        dispatch(getMissionsAction(data));
-      })
-      .catch((err) => {
-        throw new Error(err);
-      });
+    if (state.missionsArray.length === 0) {
+      getMissionsFromApi()
+        .then((data) => {
+          dispatch(getMissionsAction(data));
+        })
+        .catch((err) => {
+          throw new Error(err);
+        });
+    }
   }, []);
 
   return (
