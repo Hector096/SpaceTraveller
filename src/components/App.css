@@ -85,3 +85,7 @@ body {
 .rocket-img {
   width: 10px;
 }
+
+thead > tr > th:nth-child(2) {
+  width: 90rem;
+}

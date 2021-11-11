@@ -7,7 +7,15 @@
 - [@Link](https://spacetraveller.netlify.app/)
 
 ## Screenshots
-![screenshot](./src/assets/Screenshot.png)
+
+Application Screenshot                                                                                   |
+:---------------------------------------------------------------------------------------------------:|
+![](./src/assets/Screenshot.png)                                                                     |
+
+Application Gif                                                                               |
+:---------------------------------------------------------------------------------------------------:|
+![](./src/assets/spacetraveler.gif)                                                                     |
+
 
 ## Built With
 
@@ -28,16 +36,6 @@ and then run
 ```
 npm i
 npm start
-```
-
-To test
-```
-npm run test
-```
-
-To install React Test Renderer
-```
-npm i react-test-renderer
 ```
 
 ## Installation
