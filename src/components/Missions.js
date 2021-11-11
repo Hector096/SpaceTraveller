@@ -40,7 +40,12 @@ export default function Missions() {
         <tbody>
           {
             state.missionsArray.map(
-              (mission) => <Mission key={mission.missionId} detail={mission} />,
+              (mission) => (
+                <Mission
+                  key={mission.missionId}
+                  detail={mission}
+                />
+              ),
             )
           }
         </tbody>
