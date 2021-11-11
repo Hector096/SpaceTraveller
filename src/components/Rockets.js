@@ -8,9 +8,7 @@ export default function Rockets() {
   const rockets = useSelector((state) => state.rockets);
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(fetchRocketData());
-  }, [dispatch]);
+  useEffect(() => rockets.data === null && dispatch(fetchRocketData()), []);
 
   return (
     <div>

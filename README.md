@@ -1,13 +1,13 @@
 # Space Traveller
 
->  Space Traveller is a powerful SPA for booking slot to space travel.
+>  "Space Travelers' Hub" is a web application for a company that provides commercial and scientific space travel services, We have been working with the real live data from the SpaceX API. The application will allow users to book rockets and join selected space missions. The Space Travelers' Hub consists of Rockets, Missions, and the My Profile section.
 
 ---
 ## Live Demo
-- [@Link](#)
+- [@Link](#spacetraveller.netlify.app)
 
 ## Screenshots
-
+![screenshot](./src/assets/Screenshot.png)
 
 ## Built With
 
@@ -67,12 +67,12 @@ Contributions, issues, and feature requests are welcome!
 
 Feel free to check the [issues page](https://github.com/Hector096/SpaceTraveller/issues).
 
+
+## Acknowledgements
+
+* [ReactJS Organization](https://reactjs.org/) for the amazing [Documentation](https://reactjs.org/docs/getting-started.html) on React.
+* [Redux Organization](https://redux.js.org/) for the amazing [Redux Essentials Tutorial](https://redux.js.org/tutorials/essentials/part-1-overview-concepts) on React.
+
 ## Show your support
 
 Give a ⭐️ if you like this project!
-
-## Acknowledgments
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
