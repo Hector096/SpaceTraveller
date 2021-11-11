@@ -4,10 +4,10 @@
 
 ---
 ## Live Demo
-- [@Link](#)
+- [@Link](#spacetraveller.netlify.app)
 
 ## Screenshots
-
+![screenshot](../SpaceTraveller/src/assets/Screenshot.png)
 
 ## Built With
 
@@ -67,12 +67,12 @@ Contributions, issues, and feature requests are welcome!
 
 Feel free to check the [issues page](https://github.com/Hector096/SpaceTraveller/issues).
 
+
+## Acknowledgements
+
+* [ReactJS Organization](https://reactjs.org/) for the amazing [Documentation](https://reactjs.org/docs/getting-started.html) on React.
+* [Redux Organization](https://redux.js.org/) for the amazing [Redux Essentials Tutorial](https://redux.js.org/tutorials/essentials/part-1-overview-concepts) on React.
+
 ## Show your support
 
 Give a ⭐️ if you like this project!
-
-## Acknowledgments
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
